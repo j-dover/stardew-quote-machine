@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Stardew Valley Quote Machine</h1>
+        <h1>STARDEW VALLEY QUOTE MACHINE</h1>
       </header>
       <QuoteBox/>
     </div>
