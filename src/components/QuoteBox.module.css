@@ -1,0 +1,16 @@
+.quoteBox {
+  background: #FFD789;
+  border: 0.5em solid #E37D3F;
+  max-width: 1140px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: #56160C;
+}
+
+@media (max-width: 768px) {
+  .quoteBox {
+    font-size: 1rem;
+  }
+}
