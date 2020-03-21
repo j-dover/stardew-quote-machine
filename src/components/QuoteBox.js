@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewQuoteBtn from './NewQuoteBtn';
+import styles from './QuoteBox.module.css'
 
 class QuoteBox extends Component {
 	constructor(props) {
@@ -40,21 +41,19 @@ class QuoteBox extends Component {
   }
 
 	render() {
-		return (
-			<div>
-				{/* Text */}
-        <div id='text'>
-          <p>{this.state.quote}</p>
-        </div>
-				{/* Author */}
-        <div id='author'>
-          <p>{this.state.villager_name}</p>
-        </div>
-				{/* New-Quote Button */}
-				<NewQuoteBtn getNewQuote={this.handleNewQuote}/>
-				{/* Tweet-quote Button */}
-			</div>
+		const tweetUrl = "https://twitter.com/intent/tweet?text=";
+		var tweetIntent = this.state.quote;
+		tweetIntent = tweetIntent.split(" ").join("%20");
+		tweetIntent = tweetUrl + '%22' + tweetIntent + '%22%20%2D%20' + this.state.villager_name + ", Stardew Valley";
 
+		return (
+			<div className={styles.quoteBox} id='quote-box'>
+        <p id='text'>{'"' + this.state.quote + '"'}</p>
+        <p id='author'>{'- ' + this.state.villager_name}</p>
+				<NewQuoteBtn getNewQuote={this.handleNewQuote}/>
+				<a href={tweetIntent} id="tweet-quote" target="_blank">
+	Tweet</a>
+			</div>
 		);
 	}
 }
