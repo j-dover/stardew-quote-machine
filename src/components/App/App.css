@@ -28,3 +28,9 @@
   text-shadow: 2px 2px #3F0F08;
   font-size: 3rem;
 }
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+}

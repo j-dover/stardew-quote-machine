@@ -1,0 +1,16 @@
+.twitterShareButton {
+  background: #379683;
+  color: #05386B;
+  display: inline-block;
+  font-size: 1.2em;
+  height: 40px;
+  text-decoration: none;
+  opacity: 1!important;
+  padding: 0em 1em 0em 1em;
+}
+
+@media (max-width: 768px) {
+  .twitterShareButton {
+    margin-bottom: 1em;
+  }
+}

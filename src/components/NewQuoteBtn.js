@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import styles from './NewQuoteBtn.module.css'
 
 class NewQuoteBtn extends Component {
   render() {
     return (
-      <button id='new-quote' onClick={this.props.getNewQuote}>New Quote</button>
+      <button className={styles.newQuote} id='new-quote' onClick={this.props.getNewQuote}>New Quote</button>
     );
   }
 }
