@@ -1,4 +1,4 @@
-div.quoteBox {
+.quoteBox {
   background: #FFEDF5E1;
   max-width: 800px;
   text-align: center;
@@ -8,19 +8,33 @@ div.quoteBox {
   margin-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  font-size: 1.5rem;
   color: ##05386B;
 }
 
 .quoteText {
-  padding-top: 1em;
-  opacity: 1;
+  display: inline-block;;
+  margin: 1em 1em 0em 1em;
   text-align: left;
+  font-size: 1.5em;
+  padding: 0em 2em 0em 2em;
 }
 
+.quoteAuthor {
+  font-size: 1.5em;
+}
+
+@media (max-width: 320px) {
+  .quoteText {
+    font-size: 1.2em;
+    padding: 0em 0.5em 0em 0.5em;
+  }
+  .quoteAuthor {
+    font-size: 1.2em;
+  }
+}
 
 @media (max-width: 768px) {
-  .quoteBox {
-    font-size: 1rem;
+  .quoteText {
+    padding: 0em 1em 0em 1em;
   }
 }

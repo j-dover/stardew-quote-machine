@@ -12,9 +12,8 @@
   line-height: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .twitterShareButton {
-    margin-top: 0.5em;
-    margin-bottom: 1.5em;
+    font-size: 1em;
   }
 }

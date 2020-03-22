@@ -30,10 +30,16 @@
   font-family: 'Cabin Condensed', sans-serif;
 }
 
+@media (max-width: 320px) {
+  .app-header {
+    margin-top: 1em;
+  }
+}
+
 @media (max-width: 768px) {
   .App-header {
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
   .App-header h1 {
     font-size: 2rem;

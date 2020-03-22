@@ -8,8 +8,12 @@
   padding: 0em 1em 0em 1em;
   font-family: 'Roboto', sans-serif;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 320px) {
   .newQuote {
-    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+  .newQuote {
+    font-size: 1em;
   }
 }
