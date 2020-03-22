@@ -47,12 +47,16 @@ class QuoteBox extends Component {
 		tweetIntent = tweetIntent.split(" ").join("%20");
 		tweetIntent = tweetUrl + '%22' + tweetIntent + '%22%20%2D%20' + this.state.villager_name + ", Stardew Valley";
 
+		let newQuoteBtn = <NewQuoteBtn getNewQuote={this.handleNewQuote}/>;
+		let tweetQuoteBtn = <TweetQuoteBtn tweetIntent={tweetIntent}/>;
+
 		return (
 			<div className={styles.quoteBox} id='quote-box'>
-        <p className={styles.quoteText} id='text'>{'"' + this.state.quote + '"'}</p>
-        <p className={styles.quoteAuthor} id='author'>{'- ' + this.state.villager_name}</p>
-				<NewQuoteBtn getNewQuote={this.handleNewQuote}/>
-				<TweetQuoteBtn tweetIntent={tweetIntent}/>
+        <p className={styles.quoteText} id='text'>{this.state.quote != '' ? '"' + this.state.quote + '"' : ''}</p>
+        <p className={styles.quoteAuthor} id='author'>{this.state.author != '' ? '- ' + this.state.villager_name : ''}</p>
+				{this.state.author != '' ? newQuoteBtn : ''}
+				{this.state.author != '' ? tweetQuoteBtn : ''}
+
 			</div>
 		);
 	}
