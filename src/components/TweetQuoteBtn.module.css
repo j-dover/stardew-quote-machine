@@ -5,12 +5,16 @@
   font-size: 1.2em;
   height: 40px;
   text-decoration: none;
-  opacity: 1!important;
   padding: 0em 1em 0em 1em;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: bottom;
+  margin: 1em;
+  line-height: 40px;
 }
 
 @media (max-width: 768px) {
   .twitterShareButton {
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
   }
 }
