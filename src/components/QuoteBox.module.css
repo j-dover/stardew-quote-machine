@@ -1,13 +1,24 @@
-.quoteBox {
-  background: #FFD789;
-  border: 0.5em solid #E37D3F;
-  max-width: 1140px;
+div.quoteBox {
+  /* background: #FFD789;
+  border: 0.5em solid #E37D3F; */
+  background: white;
+  opacity: 0.8;
+  max-width: 800px;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   font-size: 1.5rem;
-  color: #56160C;
+  color: ##05386B;
 }
+
+.quoteText {
+  padding-top: 1em;
+  opacity: 1;
+  text-align: left;
+}
+
 
 @media (max-width: 768px) {
   .quoteBox {

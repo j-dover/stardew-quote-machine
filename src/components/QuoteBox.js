@@ -48,8 +48,8 @@ class QuoteBox extends Component {
 
 		return (
 			<div className={styles.quoteBox} id='quote-box'>
-        <p id='text'>{'"' + this.state.quote + '"'}</p>
-        <p id='author'>{'- ' + this.state.villager_name}</p>
+        <p className={styles.quoteText} id='text'>{'"' + this.state.quote + '"'}</p>
+        <p className={styles.quoteAuthor} id='author'>{'- ' + this.state.villager_name}</p>
 				<NewQuoteBtn getNewQuote={this.handleNewQuote}/>
 				<a href={tweetIntent} id="tweet-quote" target="_blank">
 	Tweet</a>
