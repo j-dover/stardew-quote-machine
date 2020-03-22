@@ -52,10 +52,10 @@ class QuoteBox extends Component {
 
 		return (
 			<div className={styles.quoteBox} id='quote-box'>
-        <p className={styles.quoteText} id='text'>{this.state.quote != '' ? '"' + this.state.quote + '"' : ''}</p>
-        <p className={styles.quoteAuthor} id='author'>{this.state.author != '' ? '- ' + this.state.villager_name : ''}</p>
-				{this.state.author != '' ? newQuoteBtn : ''}
-				{this.state.author != '' ? tweetQuoteBtn : ''}
+        <p className={styles.quoteText} id='text'>{this.state.quote !== '' ? '"' + this.state.quote + '"' : ''}</p>
+        <p className={styles.quoteAuthor} id='author'>{this.state.author !== '' ? '- ' + this.state.villager_name : ''}</p>
+				{this.state.author !== '' ? newQuoteBtn : ''}
+				{this.state.author !== '' ? tweetQuoteBtn : ''}
 
 			</div>
 		);
