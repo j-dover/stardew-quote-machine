@@ -1,12 +1,10 @@
 div.quoteBox {
-  /* background: #FFD789;
-  border: 0.5em solid #E37D3F; */
-  background: white;
-  opacity: 0.8;
+  background: #FFEDF5E1;
   max-width: 800px;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
   font-size: 1.5rem;
