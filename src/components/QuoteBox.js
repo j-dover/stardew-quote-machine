@@ -8,7 +8,9 @@ class QuoteBox extends Component {
 		super(props);
 		this.state = {
 			quote: '',
-			villager_name: ''
+			villager_name: '',
+			errorMessage: '',
+			error: false
 		};
     this.handleNewQuote = this.handleNewQuote.bind(this);
 	}
@@ -22,19 +24,22 @@ class QuoteBox extends Component {
 			let villager_name = data.random_quote.villager_name;
 			this.setState({
 				quote: quote,
-				villager_name: villager_name
+				villager_name: villager_name,
+				errorMessage: '',
+				error: false
 			});
+			console.log('Quote: ' + quote + "\nAuthor: " + villager_name);
 		})
 		.catch((error) => {
 			let errorMessage = 'Error - ' + error;
-			console.err(errorMessage);
+			console.error(errorMessage);
 			this.setState({
-				quote: errorMessage,
-				villager_name: ''
+				quote: '',
+				villager_name: '',
+				errorMessage: errorMessage,
+				error: true
 			});
 		});
-
-		console.log(this.state.quote);
   }
 
   componentDidMount() {
@@ -52,8 +57,8 @@ class QuoteBox extends Component {
 
 		return (
 			<div className={styles.quoteBox} id='quote-box'>
-        <p className={styles.quoteText} id='text'>{this.state.quote !== '' ? '"' + this.state.quote + '"' : ''}</p>
-        <p className={styles.quoteAuthor} id='author'>{this.state.author !== '' ? '- ' + this.state.villager_name : ''}</p>
+        <p className={styles.quoteText} id='text'>{this.state.error ? this.state.errorMessage : this.state.quote !== '' ? '"' + this.state.quote + '"' : ''}</p>
+        <p className={styles.quoteAuthor} id='author'>{this.state.error ? "" : this.state.author !== '' ? '- ' + this.state.villager_name : ''}</p>
 				{this.state.author !== '' ? newQuoteBtn : ''}
 				{this.state.author !== '' ? tweetQuoteBtn : ''}
 
